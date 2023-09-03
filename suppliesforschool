@@ -1,0 +1,13 @@
+function suppliesforschool (input) {
+let packsPen = Number(input[0]);
+let packsMarkers = Number(input[1]);
+let litersDetergent = Number(input[2]);
+let discount = Number(input[3]);
+let pricePens = packsPen * 5.80;
+let priceMarkers = packsMarkers * 7.20;
+let priceDetergent = litersDetergent * 1.20;
+let priceForMaterials = pricePens + priceMarkers + priceDetergent;
+let totalPriceDiscount = priceForMaterials - (priceForMaterials * discount/100);
+console.log(totalPriceDiscount);
+}
+suppliesforschool(["2", "3", "4", "25"]);
