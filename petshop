@@ -1,0 +1,9 @@
+function petshop (input) {
+let packsForDogs = Number(input[0]);
+let packsForCats = Number(input[1]);
+let moneyDogs = 2.50 * packsForDogs;
+let moneyCats = 4.00 * packsForCats;
+let allMoney = moneyCats + moneyDogs;
+console.log(`${allMoney} lv.`);
+}
+petshop(["5", "4"]);
