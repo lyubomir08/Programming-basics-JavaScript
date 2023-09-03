@@ -1,0 +1,14 @@
+function repainting (input) {
+let amountNylon = Number(input[0]);
+let amountPaint = Number(input[1]);
+let amountthinner = Number(input[2]);
+let amountHours = Number(input[3]);
+let priceNylon = (amountNylon + 2) * 1.50;
+let pricePaint = (amountPaint * 1.10) * 14.50;
+let priceThinner = amountthinner * 5.00;
+let totalMoneyMaterials = priceNylon + pricePaint + priceThinner + 0.40;
+let moneyMasters = (totalMoneyMaterials * 0.30) * amountHours;
+let totalMoney = totalMoneyMaterials + moneyMasters;
+console.log(totalMoney);
+}
+repainting(["10", "11", "4", "8"]);
