@@ -1,0 +1,9 @@
+function basketballequipment (input) {
+let annualTax = Number(input[0]);
+let priceTrainers = annualTax - 0.40 * annualTax;
+let priceSuit = priceTrainers - 0.20 * priceTrainers;
+let priceBall = 0.25 * priceSuit;
+let priceAccessories = 0.20 * priceBall;
+let totalMoney = priceTrainers + priceSuit + priceBall + priceAccessories + annualTax;
+console.log(totalMoney);
+}
