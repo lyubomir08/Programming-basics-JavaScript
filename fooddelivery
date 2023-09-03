@@ -1,0 +1,12 @@
+function fooddelivery (input) {
+let chickenMenus = Number(input[0]);
+let fishMenus = Number(input[1]);
+let vegetarianMenus = Number(input[2]);
+let priceChicken = chickenMenus * 10.35;
+let priceFish = fishMenus * 12.40;
+let priceVegetarian = vegetarianMenus * 8.15;
+let totalPriceMenus = priceChicken + priceFish + priceVegetarian;
+let totalMoney = totalPriceMenus + (totalPriceMenus * 0.20) + 2.50;
+console.log(totalMoney);
+}
+fooddelivery(["2", "4", "3"]);
