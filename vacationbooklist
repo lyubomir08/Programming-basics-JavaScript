@@ -1,0 +1,9 @@
+function vacationbookslist (input) {
+let pages = Number(input[0]);
+let pagesOneHour = Number(input[1]);
+let days = Number(input[2]);
+let totalTime = pages / pagesOneHour;
+let neededHoursDay = totalTime / days;
+console.log(neededHoursDay);
+}
+vacationbookslist(["212", "20", "2"]);
