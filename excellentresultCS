@@ -1,0 +1,7 @@
+function excellentresult (input) {
+let great = Number(input[0]);
+if(great >= 5.50) {
+    console.log("Excellent!")
+}
+}
+excellentresult(["6"]);
