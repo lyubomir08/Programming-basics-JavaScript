@@ -1,0 +1,25 @@
+function toyshop(input) {
+let priceExcursion = Number(input[0]);
+let puzzels = Number(input[1]);
+let dolls = Number(input[2]);
+let bears = Number(input[3]);
+let minions = Number(input[4]);
+let trucks = Number(input[5]);
+let sum = puzzels * 2.60 + dolls * 3.00 + bears * 4.10 + minions * 8.20 + trucks * 2.00;
+let numberToys = puzzels + dolls + bears + minions + trucks;
+let discount = 0;
+if(numberToys >= 50) {
+     discount = 25 / 100;
+}
+let finalPrice = sum - discount * sum;
+let rent = 10 / 100 * finalPrice;
+let profit = finalPrice - rent;
+if(profit >= priceExcursion) {
+    let moneyLeft = profit - priceExcursion;
+console.log(`Yes! ${(moneyLeft).toFixed(2)} lv left.`);
+} else {
+    let moneyNeed = priceExcursion - profit;
+    console.log(`Not enough money! ${(moneyNeed).toFixed(2)} lv needed.`);
+}
+}
+toyshop(["40.8", "20", "25", "30", "50", "10"]);
