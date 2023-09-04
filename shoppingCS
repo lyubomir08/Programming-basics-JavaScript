@@ -1,0 +1,19 @@
+function shopping(input) {
+let budget = Number(input[0]);
+let gpu = Number(input[1]);
+let cpu = Number(input[2]);
+let ram = Number(input[3]);
+let priceGpu = gpu * 250.00;
+let priceCpu = (0.35 * priceGpu) * cpu;
+let priceRam = (0.10 * priceGpu) * ram;
+let totalMoney = priceGpu + priceCpu + priceRam;
+if (gpu > cpu) {
+    totalMoney = totalMoney * 0.85;
+}
+if(totalMoney <= budget) {
+console.log(`You have ${(budget - totalMoney).toFixed(2)} leva left!`);
+} else {
+    console.log(`Not enough money! You need ${(totalMoney - budget).toFixed(2)} leva more!`);
+}
+}
+shopping(["900", "2", "1", "3"]);
