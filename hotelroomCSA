@@ -1,0 +1,49 @@
+function hotelroom(input) {
+let month = input[0];
+let nights = Number(input[1]);
+
+let priceStudio = 0;
+let priceApartment = 0;
+
+if(month === "May" || month === "October") {
+priceStudio = nights * 50.00;
+priceApartment = nights * 65.00;
+if(nights > 7 && nights <= 14) {
+    priceStudio = priceStudio * 0.95;
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+} else if(nights > 14) {
+    priceApartment = priceApartment * 0.90;
+    priceStudio = priceStudio * 0.70;
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+} else {
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+}
+} else if(month === "June" || month === "September") {
+priceStudio = nights * 75.20;
+priceApartment = nights * 68.70;
+if(nights > 14) {
+    priceStudio = priceStudio * 0.80;
+    priceApartment = priceApartment * 0.90;
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+} else {
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+}
+} else if(month === "July" || month === "August") {
+priceStudio = nights * 76.00;
+priceApartment = nights * 77.00;
+if(nights > 14) {
+    priceApartment = priceApartment * 0.90;
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+} else {
+    console.log(`Apartment: ${priceApartment.toFixed(2)} lv.`);
+    console.log(`Studio: ${priceStudio.toFixed(2)} lv.`);
+}
+}
+}
+hotelroom(["May", "15"]);
