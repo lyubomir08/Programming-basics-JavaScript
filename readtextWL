@@ -1,0 +1,10 @@
+function readtext(input) {
+let index = 0;
+let currentElement = input[index];
+while(currentElement !== "Stop") {
+    console.log(currentElement);
+    ++index;
+    currentElement = input[index];
+}
+}
+readtext(["Nakov", "SoftUni", "Bulgaria", "Stop"]);
