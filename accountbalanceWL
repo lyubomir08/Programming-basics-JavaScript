@@ -1,0 +1,19 @@
+function accountbalance(input) {
+let total = 0;
+let index = 0;
+let currentRow = input[index];
+
+while(currentRow !== "NoMoreMoney") {
+    let currRowAsNumber = Number(currentRow);
+    if(currentRow < 0) {
+        console.log('Invalid operation!');
+        break;
+    }
+    console.log(`Increase: ${currRowAsNumber.toFixed(2)}`);
+    total += currRowAsNumber;
+    index++;
+    currentRow = input[index];
+}
+console.log(`Total: ${total.toFixed(2)}`);
+}
+accountbalance();
