@@ -1,0 +1,24 @@
+function sumoftwonums(input) {
+let start = Number(input[0]);
+let end = Number(input[1]);
+let magicNumber = Number(input[2]);
+let combinationsCounter = 0;
+let isValidCombination = false;
+for(let first = start;first <= end;first++) {
+    for(let second = start;second <= end;second++) {
+        combinationsCounter++;
+        if(first + second === magicNumber) {
+            console.log(`Combination N:${combinationsCounter} (${first} + ${second} = ${magicNumber})`);
+            isValidCombination = true;
+            break;
+        }
+    }
+    if(isValidCombination) {
+        break;
+    }
+}
+if(!isValidCombination) {
+    console.log(`${combinationsCounter} combinations - neither equals ${magicNumber}`);
+}
+}
+sumoftwonums(["1", "10", "5"]);
